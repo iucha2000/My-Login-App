@@ -1,0 +1,120 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  margin: 0;
+}
+
+/* Section styling */
+section {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Section heading styling */
+.section-heading {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  letter-spacing: 1px;    /* Slight spacing between letters */
+  text-transform: uppercase; /* Capitalize all letters */
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.section-heading::after {
+  content: '';
+  width: 80px;
+  height: 3px;
+  background-color: #4CAF50;  /* Green underline */
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Form input fields */
+input[type="text"],
+input[type="password"] { /* Include password input */
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0 20px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus { /* Add focus effect for password input */
+  outline: none;
+  border-color: #4CAF50; /* Green border on focus */
+}
+
+/* Label styling */
+label {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 8px;
+  display: block;
+  text-align: left;
+}
+
+/* Primary button styling */
+button.primary {
+  width: 100%;
+  background-color: #008CBA; /* Blue background for the button */
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+button.primary:hover {
+  background-color: #005f75; /* Darker blue on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+button.primary:disabled {
+  background-color: #ccc; /* Greyed-out button when disabled */
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Small touch for responsiveness */
+@media (max-width: 600px) {
+  section {
+    padding: 20px;
+  }
+
+  button.primary {
+    font-size: 16px;
+  }
+
+  label {
+    font-size: 14px;
+  }
+
+  .section-heading {
+    font-size: 20px;
+  }
+}

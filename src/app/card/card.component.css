@@ -1,0 +1,21 @@
+.card {
+    border: 1px solid #ccc;            /* Card border */
+    border-radius: 8px;                /* Rounded corners */
+    padding: 16px;                      /* Padding inside the card */
+    margin: 10px;                       /* Space between cards */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    transition: transform 0.2s;        /* Smooth transition */
+}
+
+.card:hover {
+    transform: translateY(-5px);       /* Lift effect on hover */
+}
+
+.card h2 {
+    font-size: 20px;                    /* Font size for the title */
+    margin-bottom: 10px;                /* Margin below title */
+}
+
+.card p {
+    font-size: 14px;                    /* Font size for content */
+}
