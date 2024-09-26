@@ -1,10 +1,21 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;  /* Ensure body and html fill the viewport */
+}
+
 body {
   font-family: 'Arial', sans-serif;
   background-color: #f4f7f6;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Full viewport height */
+  justify-content: center; /* Center items horizontally */
+  align-items: center;     /* Center items vertically */
+  height: 100vh;          /* Full viewport height */
   margin: 0;
 }
 
@@ -14,9 +25,9 @@ section {
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
-  width: 100%;
-  text-align: center;
+  max-width: 400px;       /* Max width for the form */
+  width: 100%;            /* Full width within the max width */
+  text-align: center;     /* Center text within the section */
 }
 
 /* Section heading styling */
@@ -25,8 +36,8 @@ section {
   font-weight: bold;
   color: #333;
   margin-bottom: 20px;
-  letter-spacing: 1px;    /* Slight spacing between letters */
-  text-transform: uppercase; /* Capitalize all letters */
+  letter-spacing: 1px;
+  text-transform: uppercase;
   position: relative;
   padding-bottom: 10px;
 }
@@ -44,8 +55,8 @@ section {
 
 /* Form input fields */
 input[type="text"],
-input[type="password"] { /* Include password input */
-  width: 100%;
+input[type="password"] {
+  width: 100%;          /* Full width for input fields */
   padding: 12px;
   margin: 10px 0 20px 0;
   display: inline-block;
@@ -58,7 +69,7 @@ input[type="password"] { /* Include password input */
 }
 
 input[type="text"]:focus,
-input[type="password"]:focus { /* Add focus effect for password input */
+input[type="password"]:focus {
   outline: none;
   border-color: #4CAF50; /* Green border on focus */
 }
@@ -74,7 +85,7 @@ label {
 
 /* Primary button styling */
 button.primary {
-  width: 100%;
+  width: 100%;            /* Full width for the button */
   background-color: #008CBA; /* Blue background for the button */
   color: white;
   padding: 14px;
@@ -103,18 +114,18 @@ button.primary:disabled {
 /* Small touch for responsiveness */
 @media (max-width: 600px) {
   section {
-    padding: 20px;
+      padding: 20px;       /* Adjust padding on smaller screens */
   }
 
   button.primary {
-    font-size: 16px;
+      font-size: 16px;     /* Adjust button font size */
   }
 
   label {
-    font-size: 14px;
+      font-size: 14px;     /* Adjust label font size */
   }
 
   .section-heading {
-    font-size: 20px;
+      font-size: 20px;     /* Adjust heading font size */
   }
 }

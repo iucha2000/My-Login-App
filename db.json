@@ -1,0 +1,84 @@
+{
+    "cards": [
+      {
+        "id": 0,
+        "title": "Started a New Project",
+        "description": "Working on an Angular-based dashboard for data visualization.",
+        "author": "John Doe",
+        "date": "2024-09-25",
+        "status": "In Progress"
+      },
+      {
+        "id": 1,
+        "title": "Completed a Certification",
+        "description": "Achieved certification in Microsoft Azure Fundamentals.",
+        "author": "Jane Smith",
+        "date": "2024-09-20",
+        "status": "Completed"
+      },
+      {
+        "id": 2,
+        "title": "Attended a Webinar",
+        "description": "Participated in a webinar on AI and machine learning advancements.",
+        "author": "John Doe",
+        "date": "2024-09-22",
+        "status": "Attended"
+      },
+      {
+        "id": 3,
+        "title": "Published a Blog Post",
+        "description": "Wrote a detailed blog post about performance optimization in Angular apps.",
+        "author": "Jane Smith",
+        "date": "2024-09-23",
+        "status": "Published"
+      },
+      {
+        "id": 4,
+        "title": "Completed a Code Review",
+        "description": "Reviewed a pull request on GitHub for a collaborative project.",
+        "author": "John Doe",
+        "date": "2024-09-18",
+        "status": "Completed"
+      },
+      {
+        "id": 5,
+        "title": "Hosted a Workshop",
+        "description": "Led a workshop on integrating REST APIs into Angular applications.",
+        "author": "Jane Smith",
+        "date": "2024-09-19",
+        "status": "Hosted"
+      },
+      {
+        "id": 6,
+        "title": "Started Learning Docker",
+        "description": "Began a course on containerizing applications using Docker.",
+        "author": "John Doe",
+        "date": "2024-09-17",
+        "status": "In Progress"
+      },
+      {
+        "id": 7,
+        "title": "Attended Team Meeting",
+        "description": "Participated in the weekly sprint planning meeting.",
+        "author": "Jane Smith",
+        "date": "2024-09-15",
+        "status": "Attended"
+      },
+      {
+        "id": 8,
+        "title": "Fixed a Critical Bug",
+        "description": "Resolved a critical issue causing server crashes under load.",
+        "author": "John Doe",
+        "date": "2024-09-14",
+        "status": "Completed"
+      },
+      {
+        "id": 9,
+        "title": "Refactored Codebase",
+        "description": "Refactored the entire authentication module for better maintainability.",
+        "author": "Jane Smith",
+        "date": "2024-09-13",
+        "status": "Refactored"
+      }
+    ]
+}

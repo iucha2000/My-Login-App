@@ -1,6 +1,7 @@
 .cards-container {
-    display: flex;                      /* Flexbox for alignment */
-    justify-content: center;            /* Center cards horizontally */
-    flex-wrap: wrap;                    /* Allow cards to wrap on smaller screens */
+    display: flex;                     /* Flexbox for alignment */
+    justify-content: center;           /* Center cards horizontally */
+    flex-wrap: wrap;                   /* Allow cards to wrap on smaller screens */
     padding: 20px;                     /* Padding around the container */
+    position: relative;                 /* Position relative for absolute children */
 }

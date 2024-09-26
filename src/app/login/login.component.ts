@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { CookieService } from 'ngx-cookie-service';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-login',
@@ -26,7 +26,7 @@ export class LoginComponent {
     passwordfield: new FormControl('', Validators.required)
   });
 
-  constructor(private cookieService: CookieService, private router: Router){}
+  constructor(private authService: AuthService, private router: Router){}
 
   onSubmit() {
     if (this.loginForm.valid) {
@@ -34,13 +34,13 @@ export class LoginComponent {
         const usernameData = this.loginForm.value.userNameField;
         const passwordData = this.loginForm.value.passwordfield;
 
-         if(usernameData && passwordData){
-           this.cookieService.set('username', usernameData);
-           this.cookieService.set('password', passwordData);
-         console.log('Form Submitted', this.loginForm.value);
-
-         this.router.navigate(['/home']);
+        if(usernameData && passwordData)
+        {
+          this.authService.LogIn(usernameData,passwordData);
+          this.router.navigate(['/home']);
        }
     }
   }
 }
+
+//lazy loading
