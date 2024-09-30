@@ -14,8 +14,30 @@
 .card h2 {
     font-size: 20px;                    /* Font size for the title */
     margin-bottom: 10px;                /* Margin below title */
+    color:#008CBA;
 }
 
 .card p {
     font-size: 14px;                    /* Font size for content */
+}
+
+.images-container{
+    display: inline-block;
+    justify-content: flex-end;
+}
+
+.h2-container{
+    display: inline-block;
+    justify-content: flex-start;
+}
+
+.card-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-action-image{
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
 }

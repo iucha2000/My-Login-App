@@ -7,8 +7,7 @@
 
 h1 {
     display: flex; 
-    max-width: 200px;
-    font-size: 24px;           /* Header font size */
+    font-size: 28px;           /* Header font size */
     font-weight: normal;       /* Header font weight */
     margin: 0;             /* Remove margin */
 }
@@ -39,7 +38,6 @@ button.primary:disabled {
 }
 
 .button-container{
-    max-width: 200px;
     display: inline-block;
     margin: 0;
     width:auto;
@@ -48,9 +46,13 @@ button.primary:disabled {
 }
 
 .h1-container{
-    max-width: 200px;
     display: inline-block;
     width:auto;
     height:auto;
     justify-content: flex-start; 
+}
+
+.user-name{
+    font-weight: bold;
+    color:#008CBA;
 }

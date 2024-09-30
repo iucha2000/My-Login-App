@@ -46,7 +46,7 @@ section {
   content: '';
   width: 80px;
   height: 3px;
-  background-color: #4CAF50;  /* Green underline */
+  background-color: #008CBA;  
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -71,7 +71,7 @@ input[type="password"] {
 input[type="text"]:focus,
 input[type="password"]:focus {
   outline: none;
-  border-color: #4CAF50; /* Green border on focus */
+  border-color: #008CBA;
 }
 
 /* Label styling */

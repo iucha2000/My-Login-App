@@ -3,17 +3,13 @@ import { Card } from '../models/card';
 
 @Component({
   selector: 'app-card',
-  template: `
-     <div class="card">
-      <h2>{{ card.title }}</h2>
-      <p>{{ card.description }}</p>
-      <p><strong>Author:</strong> {{ card.author }}</p>
-      <p><strong>Date:</strong> {{ card.date | date:'mediumDate' }}</p>
-      <p><strong>Status:</strong> {{ card.status }}</p>
-    </div>
-  `,
+  templateUrl: './card.component.html',
   styleUrl: './card.component.css'
 })
 export class CardComponent {
   @Input() card!: Card;    
+
+  deleteCard(){
+    alert(`"Card ${this.card.id} deleted"`)
+  }
 }

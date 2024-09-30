@@ -4,12 +4,7 @@ import { CardService } from '../services/card.service';
 
 @Component({
   selector: 'app-home',
-  template: `
-    <app-header></app-header>
-    <div class="cards-container">
-      <app-card *ngFor="let card of cards" [card] = "card"></app-card>
-    </div>
-  `,
+  templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit{
