@@ -1,19 +1,16 @@
-header {
-    background-color: #4CAF50; /* Header background color */
-    color: white;               /* Text color */
-    padding: 15px 20px;        /* Padding for the header */
-    position: fixed;            /* Fixed position at the top */
-    top: 0;                     /* Position from the top */
-    left: 0;                    /* Position from the left */
-    right: 0;                   /* Override right alignment */
-    z-index: 1000;             /* Ensure header is on top of other content */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+.header {            
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
 }
 
 h1 {
+    display: flex; 
+    max-width: 200px;
     font-size: 24px;           /* Header font size */
     font-weight: normal;       /* Header font weight */
-    margin: 0;                 /* Remove margin */
+    margin: 0;             /* Remove margin */
 }
 
 button.primary {
@@ -42,6 +39,18 @@ button.primary:disabled {
 }
 
 .button-container{
-    display: flex;
-    justify-content: flex-end;
+    max-width: 200px;
+    display: inline-block;
+    margin: 0;
+    width:auto;
+    height:auto;
+    justify-content: flex-end; 
+}
+
+.h1-container{
+    max-width: 200px;
+    display: inline-block;
+    width:auto;
+    height:auto;
+    justify-content: flex-start; 
 }

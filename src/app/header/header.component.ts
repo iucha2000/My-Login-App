@@ -6,9 +6,13 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-header',
   template: `
-    <h1>Welcome, {{ username }}!</h1>
-    <div class = "button-container">
-      <button class="primary" type="button" (click)="LogOut()">Log out</button>
+    <div class = header>
+      <div class = h1-container>
+        <h1>Welcome, {{ username }}!</h1>
+      </div>
+      <div class = "button-container">
+        <button class="primary" type="button" (click)="LogOut()">Log out</button>
+      </div>
     </div>
   `,
   styleUrl: './header.component.css'
