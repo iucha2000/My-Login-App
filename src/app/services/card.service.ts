@@ -1,25 +1,37 @@
 import { Injectable } from '@angular/core';
 import { Card } from '../models/card';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CardService {
 
+  constructor(private httpClient: HttpClient) {}
 
-  url = `${window.location.protocol}//${window.location.hostname}:3000/cards`; 
-
-  constructor() {console.log(this.url)}
-
-  async getAllCards() : Promise<Card[]>
+  addCard(card: Card) : Observable<any>
   {
-    const data = await fetch(this.url);
-    return await data.json() ?? [];
+    let httpOptions = 
+    {
+      headers: new HttpHeaders({'Content-Type': 'application/json'})
+    };
+    return this.httpClient.post<any>("http://localhost:5276/api/Cards/Add-Card",card,httpOptions);
   }
 
-  async getCardById(id: number): Promise<Card>
+  // editCard(card: Card): Observable<any>
+  // {
+
+
+  // }
+
+  deleteCard(id: number)
   {
-    const data = await fetch(`${this.url}/${id}`);
-    return await data.json() ?? {};
+    return this.httpClient.delete<any>(`http://localhost:5276/api/Cards/Delete-Card/${id}`);
+  }
+
+  getAllCards() : Observable<Card[]>
+  {
+    return this.httpClient.get<Card[]>("http://localhost:5276/api/Cards/Get-All-Cards");
   }
 }

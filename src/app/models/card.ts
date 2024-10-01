@@ -4,6 +4,6 @@ export interface Card
     title: string,
     description: string,
     author: string,
-    date: string,
+    createDate: string,
     status: string
 }

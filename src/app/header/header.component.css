@@ -9,7 +9,7 @@ h1 {
     display: flex; 
     font-size: 28px;           /* Header font size */
     font-weight: normal;       /* Header font weight */
-    margin: 0;             /* Remove margin */
+    margin: 50px;             /* Remove margin */
 }
 
 button.primary {
@@ -39,7 +39,7 @@ button.primary:disabled {
 
 .button-container{
     display: inline-block;
-    margin: 0;
+    margin: 50px;
     width:auto;
     height:auto;
     justify-content: flex-end; 

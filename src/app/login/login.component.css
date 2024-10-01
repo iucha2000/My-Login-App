@@ -20,7 +20,8 @@ body {
 }
 
 /* Section styling */
-section {
+.login-container {
+  align-self: center;
   background-color: #fff;
   padding: 30px;
   border-radius: 10px;
@@ -28,6 +29,11 @@ section {
   max-width: 400px;       /* Max width for the form */
   width: 100%;            /* Full width within the max width */
   text-align: center;     /* Center text within the section */
+}
+
+.login-section{
+  display: flex;
+  justify-content: center;
 }
 
 /* Section heading styling */

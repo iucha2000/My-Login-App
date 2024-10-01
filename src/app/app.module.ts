@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { CookieService } from 'ngx-cookie-service';
 import { HomeModule } from './home/home.module';
+import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,11 +17,12 @@ import { HomeModule } from './home/home.module';
     BrowserModule,
     HomeModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [
     provideClientHydration(),
-    CookieService
+    CookieService,
+    provideHttpClient()
   ],
   bootstrap: [AppComponent]
 })
