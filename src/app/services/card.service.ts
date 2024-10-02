@@ -19,11 +19,14 @@ export class CardService {
     return this.httpClient.post<any>("http://localhost:5276/api/Cards/Add-Card",card,httpOptions);
   }
 
-  // editCard(card: Card): Observable<any>
-  // {
-
-
-  // }
+  editCard(id: number, card: Card)
+  {
+    let httpOptions = 
+    {
+      headers: new HttpHeaders({'Content-Type': 'application/json'})
+    };
+    return this.httpClient.put<any>(`http://localhost:5276/api/Cards/Edit-Card/${id}`,card,httpOptions);
+  }
 
   deleteCard(id: number)
   {
@@ -33,5 +36,10 @@ export class CardService {
   getAllCards() : Observable<Card[]>
   {
     return this.httpClient.get<Card[]>("http://localhost:5276/api/Cards/Get-All-Cards");
+  }
+
+  getCardById(id: number): Observable<Card>
+  {
+    return this.httpClient.get<Card>(`http://localhost:5276/api/Cards/Get-Card-By-Id/${id}`);
   }
 }

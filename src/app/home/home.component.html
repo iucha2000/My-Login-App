@@ -1,4 +1,7 @@
 <app-header></app-header>
-<div class="cards-container">
+<div *ngIf="editMode" class="edit-form-container" >
+  <app-edit-form></app-edit-form>
+</div>
+<div *ngIf="!editMode" class="cards-container">
   <app-card *ngFor="let card of cards" [card] = "card"></app-card>
 </div>

@@ -1,0 +1,18 @@
+<div class="edit-form-card-container">
+    <div class = "card">
+        <div class="card-header">
+            <div class="h2-container">
+            <h2>Title:&nbsp;<input type="text" [(ngModel)]="this.currentCard.title!"></h2>
+            </div>
+        </div>
+        <div class = "card-body" >
+            <p><strong>Description:&nbsp;</strong> <input type="text" [(ngModel)]="this.currentCard.description"></p>
+            <p><strong>Author:&nbsp;</strong> <input type="text" [(ngModel)]="this.currentCard.author"></p>
+            <p><strong>Status:&nbsp;</strong> <input type="text" [(ngModel)]="this.currentCard.status"></p>
+        </div>
+    </div>
+</div>
+<div class = "button-container">
+    <button class="primary" type="button" (click)="applyUpdate()">Apply</button>
+    <button class="primary" type="button" (click)="cancelUpdate()">Cancel</button>
+</div>

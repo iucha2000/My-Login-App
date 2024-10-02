@@ -22,7 +22,7 @@ import { provideHttpClient } from '@angular/common/http';
   providers: [
     provideClientHydration(),
     CookieService,
-    provideHttpClient()
+    provideHttpClient(),
   ],
   bootstrap: [AppComponent]
 })

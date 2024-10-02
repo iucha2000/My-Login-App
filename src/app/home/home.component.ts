@@ -1,4 +1,4 @@
-import { Component, OnChanges, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Card } from '../models/card';
 import { CardService } from '../services/card.service';
 
@@ -10,8 +10,9 @@ import { CardService } from '../services/card.service';
 export class HomeComponent implements OnInit{
 
   cards: Card[] = [];
+  editMode: boolean
 
-  constructor(private cardService: CardService){}
+  constructor(private cardService: CardService){this.editMode = false}
   
   ngOnInit() {
     this.cardService.getAllCards().subscribe(data => {

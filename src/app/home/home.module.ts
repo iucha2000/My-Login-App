@@ -4,12 +4,15 @@ import { HomeComponent } from './home.component';
 import { HomeRoutingModule } from './home-routing.module';
 import { HeaderComponent } from '../header/header.component';
 import { CardComponent } from '../card/card.component';
+import { EditFormComponent } from '../edit-form/edit-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [HomeComponent, HeaderComponent, CardComponent],
+  declarations: [HomeComponent, HeaderComponent, CardComponent, EditFormComponent],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    FormsModule
   ],
   exports:[
     HomeComponent

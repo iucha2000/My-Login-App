@@ -36,8 +36,14 @@
     justify-content: space-between;
 }
 
-.card-action-image{
+.card-delete-image{
     width: 18px;
     height: 18px;
+    cursor: pointer;
+}
+
+.card-edit-image{
+    width: 20px;
+    height: 20px;
     cursor: pointer;
 }
