@@ -10,12 +10,10 @@ import { HomeComponent } from '../home/home.component';
   styleUrl: './edit-form.component.css'
 })
 export class EditFormComponent {
-  currentCard!: Card
+  currentCard: Card = {id: 0, title: '', description: '', author: '', createDate: '', status: ''}
   cardId!: number
 
   constructor(private cardService: CardService, private cookieService: CookieService, private homeComponent: HomeComponent){
-
-    this.currentCard = {id: 0, title: '', description: '', author: '', createDate: '', status: ''}
 
     this.cardId = Number(this.cookieService.get('cardId'));
     if(this.cardId != 0)
