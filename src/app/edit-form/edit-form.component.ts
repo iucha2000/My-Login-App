@@ -44,6 +44,7 @@ export class EditFormComponent {
   }
 
   cancelUpdate(){
+    this.cookieService.delete('cardId')
     this.homeComponent.editMode = false;
   }
 }

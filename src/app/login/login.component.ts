@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
-import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -15,27 +13,17 @@ export class LoginComponent {
     passwordfield: new FormControl('', Validators.required)
   });
 
-  constructor(private authService: AuthService, private router: Router, private userService: UserService){}
+  constructor(private authService: AuthService){}
 
   onSubmit() {
     if (this.loginForm.valid) {
-
       const usernameData = this.loginForm.value.userNameField ?? '';
       const passwordData = this.loginForm.value.passwordfield ?? '';
 
-      this.userService.getUser(usernameData).subscribe(data => {
-        if(data != null)
-        {
-          if(usernameData && passwordData)
-          {
-            this.authService.LogIn(usernameData,passwordData);
-            this.router.navigate(['/home']);
-          }
-        }
-        else{
-          alert("User with given credentials does not exists!");
-        }
-      });
+      if(usernameData && passwordData)
+      {
+        this.authService.LogIn(usernameData,passwordData);
+      }
     }
   }
 }

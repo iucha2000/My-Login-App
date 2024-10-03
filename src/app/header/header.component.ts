@@ -14,7 +14,9 @@ export class HeaderComponent {
   username: string | null;
 
   constructor(private authService: AuthService, private cookieService: CookieService, private router: Router, private homeComponent: HomeComponent){
-    this.username = this.cookieService.get('username') || null;
+    let token = this.cookieService.get('token')
+    let decodedJWT = JSON.parse(window.atob(token.split('.')[1]));
+    this.username = decodedJWT.username;
   }
 
   AddCard()

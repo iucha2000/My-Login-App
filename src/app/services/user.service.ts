@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 import { User } from '../models/user';
-import { Observable } from 'rxjs';
+import { catchError, Observable, throwError } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Login } from '../models/login';
+import { Token } from '../models/token';
 
 @Injectable({
   providedIn: 'root'
@@ -22,5 +24,26 @@ export class UserService {
   getUser(username: string): Observable<User>
   {
     return this.httpClient.get<User>(`http://localhost:5276/api/Users/Get-User-By-Username/${username}`);
+  }
+
+  authenticateUser(login: Login) : Observable<Token>
+  {
+    let httpOptions = 
+    {
+      headers: new HttpHeaders({'Content-Type': 'application/json'})
+    };
+    return this.httpClient.post<Token>("http://localhost:5276/api/Authentication",login,httpOptions).pipe(
+      catchError(error => {
+        if(error.status == 401)
+        {
+          alert("Invalid credentials");
+        }
+        else
+        {
+          alert(error.error)
+        }
+        return throwError(() => error);
+      })
+    );
   }
 }
