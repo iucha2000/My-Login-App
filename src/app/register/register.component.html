@@ -1,0 +1,16 @@
+<section class = "register-section">
+    <div class="register-container">
+      <h2 class="section-heading">Registration</h2>
+      <form [formGroup] = "registerForm" (ngSubmit)="onSubmit()">
+        <label for="email">Email<span class="required">*</span></label>
+        <input id="email" type="text" formControlName="emailField">
+
+        <label for="username">Username<span class="required">*</span></label>
+        <input id="username" type="text" formControlName="userNameField">
+  
+        <label for="password">Password<span class="required">*</span></label>
+        <input id="password" type="password" formControlName="passwordfield">
+        <button class="primary" type="submit">Register</button>
+      </form>
+    </div>
+  </section>

@@ -117,6 +117,16 @@ button.primary:disabled {
   box-shadow: none;
 }
 
+.register-text-container{
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.register-text{
+  margin-top: 10px;
+}
+
 /* Small touch for responsiveness */
 @media (max-width: 600px) {
   section {
