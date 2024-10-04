@@ -7,7 +7,7 @@
         </div>
         <div class = "card-body" >
             <p><strong>Description:&nbsp;</strong> <input type="text" [(ngModel)]="this.currentCard.description"></p>
-            <p><strong>Author:&nbsp;</strong> <input type="text" [(ngModel)]="this.currentCard.author"></p>
+            <p><strong>Author:&nbsp;</strong> <input type="text" [(ngModel)]="this.currentCard.author" [disabled]="true"></p>
             <p><strong>Status:&nbsp;</strong> <input type="text" [(ngModel)]="this.currentCard.status"></p>
         </div>
     </div>

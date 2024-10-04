@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { CookieService } from 'ngx-cookie-service';
 import { HomeModule } from './home/home.module';
-import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 import { RegisterComponent } from './register/register.component';
 
 @NgModule({
@@ -24,7 +24,7 @@ import { RegisterComponent } from './register/register.component';
   providers: [
     provideClientHydration(),
     CookieService,
-    provideHttpClient(),
+    provideHttpClient(withFetch()),
   ],
   bootstrap: [AppComponent]
 })

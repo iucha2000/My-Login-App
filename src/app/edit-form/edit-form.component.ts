@@ -3,6 +3,7 @@ import { Card } from '../models/card';
 import { CardService } from '../services/card.service';
 import { CookieService } from 'ngx-cookie-service';
 import { HomeComponent } from '../home/home.component';
+import { TokenService } from '../services/token.service';
 
 @Component({
   selector: 'app-edit-form',
@@ -13,7 +14,7 @@ export class EditFormComponent {
   currentCard: Card = {id: 0, title: '', description: '', author: '', createDate: '', status: ''}
   cardId!: number
 
-  constructor(private cardService: CardService, private cookieService: CookieService, private homeComponent: HomeComponent){
+  constructor(private cardService: CardService, private cookieService: CookieService, private homeComponent: HomeComponent, private tokenService: TokenService){
 
     this.cardId = Number(this.cookieService.get('cardId'));
     if(this.cardId != 0)
@@ -21,6 +22,10 @@ export class EditFormComponent {
       this.cardService.getCardById(this.cardId).subscribe(data => {
         this.currentCard = data;
       });
+    }
+    else
+    {
+      this.currentCard.author = tokenService.getUsername();
     }
   }
 
