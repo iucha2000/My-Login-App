@@ -14,11 +14,7 @@ export class UserService {
 
   addUser(user: User) : Observable<any>
   {
-    let httpOptions = 
-    {
-      headers: new HttpHeaders({'Content-Type': 'application/json'})
-    };
-    return this.httpClient.post<any>("http://localhost:5276/api/Users/Add-User",user,httpOptions);
+    return this.httpClient.post<any>("http://localhost:5276/api/Users/Add-User",user);
   }
 
   getUser(username: string): Observable<User>
@@ -28,22 +24,6 @@ export class UserService {
 
   authenticateUser(login: Login) : Observable<Token>
   {
-    let httpOptions = 
-    {
-      headers: new HttpHeaders({'Content-Type': 'application/json'})
-    };
-    return this.httpClient.post<Token>("http://localhost:5276/api/Authentication",login,httpOptions).pipe(
-      catchError(error => {
-        if(error.status == 401)
-        {
-          alert("Invalid credentials");
-        }
-        else
-        {
-          alert(error.error)
-        }
-        return throwError(() => error);
-      })
-    );
+    return this.httpClient.post<Token>("http://localhost:5276/api/Authentication",login);
   }
 }

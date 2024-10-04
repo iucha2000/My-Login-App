@@ -6,8 +6,9 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { CookieService } from 'ngx-cookie-service';
 import { HomeModule } from './home/home.module';
-import { provideHttpClient, withFetch } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, provideHttpClient, withFetch, withInterceptorsFromDi, } from '@angular/common/http';
 import { RegisterComponent } from './register/register.component';
+import { MainInterceptor } from './interceptors/main.interceptor';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { RegisterComponent } from './register/register.component';
   providers: [
     provideClientHydration(),
     CookieService,
-    provideHttpClient(withFetch()),
+    provideHttpClient(withFetch(), withInterceptorsFromDi()),
+    {provide: HTTP_INTERCEPTORS, useClass: MainInterceptor, multi: true}
   ],
   bootstrap: [AppComponent]
 })

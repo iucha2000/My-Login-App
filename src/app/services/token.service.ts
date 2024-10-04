@@ -6,28 +6,16 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class TokenService {
 
-  private decodedJWT: any;
+  constructor(private cookieService: CookieService) { }
 
-  constructor(private cookieService: CookieService) 
-  { 
-    this.decodeToken();
-  }
-
-  private decodeToken(): void {
+  decodeToken() : any
+  {
     let token = this.cookieService.get('token');
-    if (token) {
-      this.decodedJWT = JSON.parse(window.atob(token.split('.')[1]));
-    } else {
-      this.decodedJWT = null;
-    }
+    return JSON.parse(window.atob(token.split('.')[1]));
   }
 
-  getUsername(): string {
-    return this.decodedJWT.username;
+  getUsername(): string 
+  {
+    return this.decodeToken().username;
   }
-
-  getPassword(): string {
-    return this.decodedJWT.password;
-  }
-
 }

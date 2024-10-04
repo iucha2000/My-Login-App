@@ -10,135 +10,30 @@ import { Router } from '@angular/router';
 })
 export class CardService {
 
-  constructor(private httpClient: HttpClient, private cookieService: CookieService, private router: Router) {}
+  constructor(private httpClient: HttpClient) {}
 
   addCard(card: Card) : Observable<any>
   {
-    let token = this.cookieService.get('token');
-    let httpOptions = 
-    {
-      headers: new HttpHeaders(
-        {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`
-        })
-    };
-    return this.httpClient.post<any>("http://localhost:5276/api/Cards/Add-Card",card,httpOptions).pipe(
-      catchError(error => {
-        if(error.status == 401)
-        {
-          this.router.navigate(['/login']);
-        }
-        else
-        {
-          alert(error.error)
-        }
-        return throwError(() => error);
-      })
-    );
+    return this.httpClient.post<any>("http://localhost:5276/api/Cards/Add-Card",card);
   }
 
   editCard(id: number, card: Card)
   {
-    let token = this.cookieService.get('token');
-    let httpOptions = 
-    {
-      headers: new HttpHeaders(
-        {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`
-        })
-    };
-    return this.httpClient.put<any>(`http://localhost:5276/api/Cards/Edit-Card/${id}`,card,httpOptions).pipe(
-      catchError(error => {
-        if(error.status == 401)
-        {
-          this.router.navigate(['/login']);
-        }
-        else
-        {
-          alert(error.error)
-        }
-        return throwError(() => error);
-      })
-    );
+    return this.httpClient.put<any>(`http://localhost:5276/api/Cards/Edit-Card/${id}`,card);
   }
 
   deleteCard(id: number)
   {
-    let token = this.cookieService.get('token');
-    let httpOptions = 
-    {
-      headers: new HttpHeaders(
-        {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`
-        })
-    };
-    return this.httpClient.delete<any>(`http://localhost:5276/api/Cards/Delete-Card/${id}`,httpOptions).pipe(
-      catchError(error => {
-        if(error.status == 401)
-        {
-          this.router.navigate(['/login']);
-        }
-        else
-        {
-          alert(error.error)
-        }
-        return throwError(() => error);
-      })
-    );
+    return this.httpClient.delete<any>(`http://localhost:5276/api/Cards/Delete-Card/${id}`);
   }
 
   getAllCards() : Observable<Card[]>
   {
-    let token = this.cookieService.get('token');
-    let httpOptions = 
-    {
-      headers: new HttpHeaders(
-        {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`
-        })
-    };
-    return this.httpClient.get<Card[]>("http://localhost:5276/api/Cards/Get-All-Cards",httpOptions).pipe(
-      catchError(error => {
-        if(error.status == 401)
-        {
-          this.router.navigate(['/login']);
-        }
-        else
-        {
-          alert(error.error)
-        }
-        return throwError(() => error);
-      })
-    )
+    return this.httpClient.get<Card[]>("http://localhost:5276/api/Cards/Get-All-Cards");
   }
 
   getCardById(id: number): Observable<Card>
   {
-    let token = this.cookieService.get('token');
-    let httpOptions = 
-    {
-      headers: new HttpHeaders(
-        {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`
-        })
-    };
-    return this.httpClient.get<Card>(`http://localhost:5276/api/Cards/Get-Card-By-Id/${id}`,httpOptions).pipe(
-      catchError(error => {
-        if(error.status == 401)
-        {
-          this.router.navigate(['/login']);
-        }
-        else
-        {
-          alert(error.error)
-        }
-        return throwError(() => error);
-      })
-    )
+    return this.httpClient.get<Card>(`http://localhost:5276/api/Cards/Get-Card-By-Id/${id}`);
   }
 }
