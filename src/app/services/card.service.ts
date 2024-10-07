@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Card } from '../models/card';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { catchError, Observable, throwError } from 'rxjs';
-import { CookieService } from 'ngx-cookie-service';
-import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import {Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'

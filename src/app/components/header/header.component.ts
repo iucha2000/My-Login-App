@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
-import { AuthService } from '../services/auth.service';
+import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 import { HomeComponent } from '../home/home.component';
-import { TokenService } from '../services/token.service';
+import { TokenService } from '../../services/token.service';
 
 @Component({
   selector: 'app-header',

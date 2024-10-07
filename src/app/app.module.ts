@@ -3,11 +3,11 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './components/login/login.component';
 import { CookieService } from 'ngx-cookie-service';
-import { HomeModule } from './home/home.module';
+import { HomeModule } from './components/home/home.module';
 import { HTTP_INTERCEPTORS, provideHttpClient, withFetch, withInterceptorsFromDi, } from '@angular/common/http';
-import { RegisterComponent } from './register/register.component';
+import { RegisterComponent } from './components/register/register.component';
 import { MainInterceptor } from './interceptors/main.interceptor';
 
 @NgModule({

@@ -6,7 +6,3 @@ platformBrowserDynamic().bootstrapModule(AppModule, {
   ngZoneEventCoalescing: true
 })
   .catch(err => console.error(err));
-
-  //TODO add displaying only user's cards
-
-  //TODO add admin panel

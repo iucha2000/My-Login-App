@@ -1,9 +1,9 @@
 import { Component, Input} from '@angular/core';
-import { Card } from '../models/card';
-import { CardService } from '../services/card.service';
+import { Card } from '../../models/card';
+import { CardService } from '../../services/card.service';
 import { HomeComponent } from '../home/home.component';
 import { CookieService } from 'ngx-cookie-service';
-import { TokenService } from '../services/token.service';
+import { TokenService } from '../../services/token.service';
 
 @Component({
   selector: 'app-card',

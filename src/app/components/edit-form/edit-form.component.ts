@@ -1,9 +1,9 @@
 import { Component} from '@angular/core';
-import { Card } from '../models/card';
-import { CardService } from '../services/card.service';
+import { Card } from '../../models/card';
+import { CardService } from '../../services/card.service';
 import { CookieService } from 'ngx-cookie-service';
 import { HomeComponent } from '../home/home.component';
-import { TokenService } from '../services/token.service';
+import { TokenService } from '../../services/token.service';
 
 @Component({
   selector: 'app-edit-form',
@@ -35,7 +35,7 @@ export class EditFormComponent {
       this.cardService.editCard(this.cardId, this.currentCard).subscribe(() => 
         {
           this.homeComponent.ngOnInit();
-          this.homeComponent.editMode = false;
+          this.cancelUpdate();
         });
     }
     else
@@ -43,7 +43,7 @@ export class EditFormComponent {
       this.cardService.addCard(this.currentCard).subscribe(() => 
         {
           this.homeComponent.ngOnInit();
-          this.homeComponent.editMode = false;
+          this.cancelUpdate();
         });
     }
   }

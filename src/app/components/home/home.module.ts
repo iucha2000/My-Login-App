@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import { HomeRoutingModule } from './home-routing.module';
-import { HeaderComponent } from '../header/header.component';
-import { CardComponent } from '../card/card.component';
+import { HeaderComponent } from '../../components/header/header.component';
+import { CardComponent } from '../../components/card/card.component';
 import { EditFormComponent } from '../edit-form/edit-form.component';
 import { FormsModule } from '@angular/forms';
 

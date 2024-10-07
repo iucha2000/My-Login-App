@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { UserService } from '../services/user.service';
-import { User } from '../models/user';
+import { UserService } from '../../services/user.service';
+import { User } from '../../models/user';
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent {
 
-  user: User = {email: '', username: '', password: ''};
+  user: User = {email: '', username: '', password: '', role: 0};
 
   registerForm = new FormGroup({
     emailField: new FormControl('', [Validators.required, Validators.email]),
