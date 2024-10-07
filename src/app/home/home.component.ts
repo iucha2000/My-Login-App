@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit{
   cards: Card[] = [];
   editMode: boolean
 
-  constructor(private cardService: CardService, private tokenService: TokenService){this.editMode = false}
+  constructor(private cardService: CardService){this.editMode = false}
   
   ngOnInit() {
     this.cardService.getAllCards().subscribe(data => {
