@@ -115,6 +115,16 @@ button.primary:disabled {
   box-shadow: none;
 }
 
+.login-text-container{
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.login-text{
+  margin-top: 10px;
+}
+
 @media (max-width: 600px) {
     section {
         padding: 20px;       /* Adjust padding on smaller screens */

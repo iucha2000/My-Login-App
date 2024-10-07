@@ -7,4 +7,8 @@ platformBrowserDynamic().bootstrapModule(AppModule, {
 })
   .catch(err => console.error(err));
 
-  //TODO add automatic initialization of name when adding a card, as well as displaying only user's cards
+  //TODO add displaying only user's cards
+
+  //TODO add edit-delete only for user's own cards
+
+  //TODO add admin panel
