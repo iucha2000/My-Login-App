@@ -9,6 +9,4 @@ platformBrowserDynamic().bootstrapModule(AppModule, {
 
   //TODO add displaying only user's cards
 
-  //TODO add edit-delete only for user's own cards
-
   //TODO add admin panel

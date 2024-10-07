@@ -8,7 +8,7 @@ export class TokenService {
 
   constructor(private cookieService: CookieService) { }
 
-  decodeToken() : any
+  private decodeToken() : any
   {
     let token = this.cookieService.get('token');
     return JSON.parse(window.atob(token.split('.')[1]));
@@ -17,5 +17,10 @@ export class TokenService {
   getUsername(): string 
   {
     return this.decodeToken().username;
+  }
+
+  getRole(): string
+  {
+    return this.decodeToken().role;
   }
 }

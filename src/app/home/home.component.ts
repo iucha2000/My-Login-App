@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Card } from '../models/card';
 import { CardService } from '../services/card.service';
+import { TokenService } from '../services/token.service';
 
 @Component({
   selector: 'app-home',
@@ -12,11 +13,12 @@ export class HomeComponent implements OnInit{
   cards: Card[] = [];
   editMode: boolean
 
-  constructor(private cardService: CardService){this.editMode = false}
+  constructor(private cardService: CardService, private tokenService: TokenService){this.editMode = false}
   
   ngOnInit() {
     this.cardService.getAllCards().subscribe(data => {
-      this.cards = data;
+      this.cards = data
+      //.filter(card => card.author == this.tokenService.getUsername());
       console.log(this.cards)
     });
   }
