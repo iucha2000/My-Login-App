@@ -3,7 +3,8 @@
       <h1>Welcome,&nbsp;<span class = "user-name">{{ username }}</span></h1>
     </div>
     <div class = "button-container">
+      <button *ngIf="isAdmin" id="add-user-button" class="primary" type="button" (click)="AddUser()">Add User</button>
       <button class="primary" type="button" (click)="AddCard()">Add Card</button>
-      <button class="primary" type="button" (click)="LogOut()">Log out</button>
+      <button class="primary" id="log-out-button" type="button" (click)="LogOut()">Log out</button>
     </div>
   </div>

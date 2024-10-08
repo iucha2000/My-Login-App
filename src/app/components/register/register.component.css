@@ -50,7 +50,7 @@
     content: '';
     width: 80px;
     height: 3px;
-    background-color: #008CBA;  
+    background-color: #4fb86a;  
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -75,7 +75,7 @@ input[type="password"] {
 input[type="text"]:focus,
 input[type="password"]:focus {
   outline: none;
-  border-color: #008CBA;
+  border-color: #4fb86a;
 }
 
 /* Label styling */
@@ -90,7 +90,7 @@ label {
 /* Primary button styling */
 button.primary {
   width: 100%;            /* Full width for the button */
-  background-color: #008CBA; /* Blue background for the button */
+  background-color: #4fb86a; /* Blue background for the button */
   color: white;
   padding: 14px;
   border: none;
@@ -104,7 +104,7 @@ button.primary {
 }
 
 button.primary:hover {
-  background-color: #005f75; /* Darker blue on hover */
+  background-color: #275c34; /* Darker blue on hover */
   transform: translateY(-2px); /* Slight lift effect */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }

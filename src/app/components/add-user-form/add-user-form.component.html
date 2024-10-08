@@ -1,0 +1,36 @@
+<div class="edit-form-card-container">
+  <div class="card">
+    <div class="card-header">
+      <div class="h2-container">
+        <h2>Add new user</h2>
+      </div>
+    </div>
+    <div class="card-body">
+      <p>
+        <strong>Email:&nbsp;</strong>
+        <input type="text" [(ngModel)]="this.newUser.email" />
+      </p>
+      <p>
+        <strong>Username:&nbsp;</strong>
+        <input type="text" [(ngModel)]="this.newUser.username" />
+      </p>
+      <p>
+        <strong>Password:&nbsp;</strong>
+        <input type="text" [(ngModel)]="this.newUser.password" />
+      </p>
+      <p><strong>Role:&nbsp;</strong>
+        <select id="role" name="role" [(ngModel)]="this.newUser.role">
+            <option [ngValue]="1">Admin</option>
+            <option [ngValue]="0">User</option>
+          </select></p>
+      <div class="select-container">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="button-container">
+  <button class="primary" type="button" (click)="applyAddUser()">Apply</button>
+  <button class="primary" type="button" (click)="cancelAddUser()">
+    Cancel
+  </button>
+</div>

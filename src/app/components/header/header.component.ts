@@ -13,14 +13,28 @@ import { TokenService } from '../../services/token.service';
 export class HeaderComponent {
 
   username: string | null;
+  isAdmin: boolean = false;
 
   constructor(private authService: AuthService, private cookieService: CookieService, private router: Router, private homeComponent: HomeComponent, private tokenService: TokenService){
     this.username = tokenService.getUsername();
+
+    if(tokenService.getRole() == "Admin")
+    {
+      this.isAdmin = true;
+    }
+  }
+
+  AddUser()
+  {
+    //TODO init add user form
+    this.homeComponent.editMode = false;
+    this.homeComponent.addUserMode = true;
   }
 
   AddCard()
   {
     this.cookieService.delete('cardId');
+    this.homeComponent.addUserMode = false;
     this.homeComponent.editMode = true;
   }
 

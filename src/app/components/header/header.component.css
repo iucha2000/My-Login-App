@@ -37,6 +37,16 @@ button.primary:disabled {
     cursor: not-allowed;        /* Disable cursor */
 }
 
+#add-user-button
+{
+    background-color: #4fb86a
+}
+
+#log-out-button
+{
+    background-color: #28a292
+}
+
 .button-container{
     display: inline-block;
     margin: 50px;
@@ -54,5 +64,5 @@ button.primary:disabled {
 
 .user-name{
     font-weight: bold;
-    color:#008CBA;
+    color:#4fb86a;
 }

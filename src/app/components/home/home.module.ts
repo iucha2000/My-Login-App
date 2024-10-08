@@ -6,9 +6,10 @@ import { HeaderComponent } from '../../components/header/header.component';
 import { CardComponent } from '../../components/card/card.component';
 import { EditFormComponent } from '../edit-form/edit-form.component';
 import { FormsModule } from '@angular/forms';
+import { AddUserFormComponent } from '../add-user-form/add-user-form.component';
 
 @NgModule({
-  declarations: [HomeComponent, HeaderComponent, CardComponent, EditFormComponent],
+  declarations: [HomeComponent, HeaderComponent, CardComponent, EditFormComponent, AddUserFormComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,

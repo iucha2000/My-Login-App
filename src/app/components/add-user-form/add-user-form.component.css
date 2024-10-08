@@ -1,0 +1,111 @@
+.edit-form-container{
+    position: relative;
+    width: 50%;
+    justify-content: center;
+    display: flex;
+}
+
+.edit-form-card-container{
+    justify-content: center;
+    display: flex;
+}
+
+.card {
+    border: 1px solid #4fb86a;            
+    border-radius: 8px;                
+    padding: 16px;                      
+    margin: 10px;                       
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.2s;        
+}
+
+.card-header{
+    display: flex;
+    justify-content: center;
+}
+
+.card h2 {
+    display: flex;
+    font-size: 40px;                    
+    margin-bottom: 10px;                
+    color:#4fb86a;
+}
+
+.card p {
+    display: flex;
+    font-size: 30px;                   
+}
+
+button.primary {
+    background-color: #4fb86a; /* Button background color */
+    color: white;
+    padding: 10px 15px;        /* Button padding */
+    border: none;
+    border-radius: 10px;       /* Round button corners */
+    cursor: pointer;
+    font-size: 16px;           /* Button font size */
+    font-weight: bold;         /* Button font weight */
+    text-transform: uppercase;  /* Uppercase text */
+    transition: all 0.3s ease; /* Transition effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+.button-container{
+    justify-content:center;
+    display: flex;
+}
+
+.h2-container {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    width:70%;
+    height: auto;
+    font-size:inherit;
+    border: 1px solid #4fb86a;
+}
+
+.select-container {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0; /* Margin around the dropdown */
+}
+
+.styled-select {
+    width: 100%;  /* Make it full width within its container */
+    padding: 10px 15px; /* Padding for better spacing */
+    font-size: inherit; /* Match font size with other elements */
+    border: 1px solid #4fb86a; /* Green border to match your theme */
+    border-radius: 8px; /* Rounded corners like the card */
+    background-color: white; /* Background color */
+    color: #333; /* Text color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    appearance: none; /* Remove default styling of dropdown */
+    cursor: pointer; /* Pointer on hover */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.styled-select:hover {
+    border-color: #3ca55c; /* Darken the border color on hover */
+}
+
+.styled-select:focus {
+    outline: none; /* Remove default outline */
+    border-color: #3ca55c; /* Highlight border on focus */
+}
+
+strong{
+    width: 30%;
+    color: #213d23;
+}
+
+#role{
+    width: 70%;
+    font-size:inherit;
+}
+
+option{
+    font-size: 20px;
+}
