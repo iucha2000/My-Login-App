@@ -23,8 +23,18 @@ export class HomeComponent implements OnInit{
   ngOnInit() {
     this.cardService.getAllCards().subscribe(data => {
       this.cards = data
-      //.filter(card => card.author == this.tokenService.getUsername());
-      console.log(this.cards)
+    });
+  }
+
+  ngOnInitFiltered(text: string){
+    this.cardService.getAllCards().subscribe(data => {
+      this.cards = data.filter(card => 
+        card.title.toLowerCase().includes(text.toLowerCase()) ||
+        card.description.toLowerCase().includes(text.toLowerCase()) ||
+        card.author.toLowerCase().includes(text.toLowerCase()) ||
+        card.createDate.includes(text) ||
+        card.status.toLowerCase().includes(text.toLowerCase())
+      );
     });
   }
 }

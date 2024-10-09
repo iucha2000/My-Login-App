@@ -26,7 +26,6 @@ export class HeaderComponent {
 
   AddUser()
   {
-    //TODO init add user form
     this.homeComponent.editMode = false;
     this.homeComponent.addUserMode = true;
   }
@@ -42,5 +41,17 @@ export class HeaderComponent {
   {
     this.authService.LogOut();
     this.router.navigate(['']);
+  }
+
+  filterResults(text: string)
+  {
+    if(!text)
+    {
+      this.homeComponent.ngOnInit();
+    }
+    else
+    {
+      this.homeComponent.ngOnInitFiltered(text);
+    }
   }
 }

@@ -24,6 +24,7 @@ button.primary {
     text-transform: uppercase;  /* Uppercase text */
     transition: all 0.3s ease; /* Transition effect */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    margin-right: 10px;
 }
 
 button.primary:hover {
@@ -65,4 +66,27 @@ button.primary:disabled {
 .user-name{
     font-weight: bold;
     color:#4fb86a;
+}
+
+form {
+    display: flex;
+    align-items: center; /* Vertically aligns the input and button */
+    margin: 20px 0;      /* Adds some space around the form */
+}
+
+.filter-input {
+    padding: 10px;        /* Adds padding inside the input */
+    font-size: 16px;      /* Matches the button font size */
+    border-radius: 25px;  /* Round the corners like the button */
+    border: 1px solid #ccc; /* Light border around the input */
+    margin-right: 10px;   /* Space between input and button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a slight shadow */
+    width: 500px;         /* Fixed width for the input field */
+    transition: all 0.3s ease; /* Smooth transition for focus */
+}
+
+.filter-input:focus {
+    outline: none;        /* Remove default outline */
+    border-color: #28a292; /* Green border on focus */
+
 }

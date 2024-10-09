@@ -2,6 +2,9 @@
     <div class = h1-container>
       <h1>Welcome,&nbsp;<span class = "user-name">{{ username }}</span></h1>
     </div>
+    <form>
+      <input class = "filter-input" (input)="filterResults(filter.value)" type = "text" #filter placeholder="Search">
+    </form>
     <div class = "button-container">
       <button *ngIf="isAdmin" id="add-user-button" class="primary" type="button" (click)="AddUser()">Add User</button>
       <button class="primary" type="button" (click)="AddCard()">Add Card</button>
