@@ -6,25 +6,27 @@
       </div>
     </div>
     <div class="card-body">
-      <p>
-        <strong>Email:&nbsp;</strong>
-        <input type="text" [(ngModel)]="this.newUser.email" />
-      </p>
-      <p>
-        <strong>Username:&nbsp;</strong>
-        <input type="text" [(ngModel)]="this.newUser.username" />
-      </p>
-      <p>
-        <strong>Password:&nbsp;</strong>
-        <input type="text" [(ngModel)]="this.newUser.password" />
-      </p>
-      <p><strong>Role:&nbsp;</strong>
-        <select id="role" name="role" [(ngModel)]="this.newUser.role">
+      <form [formGroup]="addUserForm" (ngSubmit)="applyAddUser()">
+        <p>
+          <strong>Email:&nbsp;</strong>
+          <input type="text" formControlName="emailField" />
+        </p>
+        <p>
+          <strong>Username:&nbsp;</strong>
+          <input type="text" formControlName="userNameField" />
+        </p>
+        <p>
+          <strong>Password:&nbsp;</strong>
+          <input type="text" formControlName="passwordfield" />
+        </p>
+        <p>
+          <strong>Role:&nbsp;</strong>
+          <select id="role" name="role" formControlName="rolefield">
             <option [ngValue]="1">Admin</option>
             <option [ngValue]="0">User</option>
-          </select></p>
-      <div class="select-container">
-      </div>
+          </select>
+        </p>
+      </form>
     </div>
   </div>
 </div>

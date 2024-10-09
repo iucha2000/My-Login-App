@@ -42,5 +42,9 @@ export class RegisterComponent {
         }
       });
     }
+    else
+    {
+      alert("Please fill all fields in required format");
+    }
   }
 }

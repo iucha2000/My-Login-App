@@ -5,7 +5,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HeaderComponent } from '../../components/header/header.component';
 import { CardComponent } from '../../components/card/card.component';
 import { EditFormComponent } from '../edit-form/edit-form.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddUserFormComponent } from '../add-user-form/add-user-form.component';
 
 @NgModule({
@@ -13,7 +13,8 @@ import { AddUserFormComponent } from '../add-user-form/add-user-form.component';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports:[
     HomeComponent

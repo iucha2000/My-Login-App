@@ -7,5 +7,4 @@ platformBrowserDynamic().bootstrapModule(AppModule, {
 })
   .catch(err => console.error(err));
 
-  //TODO change add-user form to reactive forms
   //TODO implement edit/delete user (manage users)
