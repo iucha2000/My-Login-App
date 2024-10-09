@@ -34,7 +34,7 @@ export class MainInterceptor implements HttpInterceptor{
         return next.handle(request).pipe(
             catchError(res => {
                 if(res.status == 401){
-                    if(this.router.url != "/login"){
+                    if(this.router.url != "/login" && this.router.url != "/"){
                         this.router.navigate(['/login']);
                     }
                     else{
