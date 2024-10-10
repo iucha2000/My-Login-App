@@ -6,5 +6,3 @@ platformBrowserDynamic().bootstrapModule(AppModule, {
   ngZoneEventCoalescing: true
 })
   .catch(err => console.error(err));
-
-  //TODO implement edit/delete user (manage users)

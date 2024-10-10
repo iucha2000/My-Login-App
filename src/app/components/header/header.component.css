@@ -70,23 +70,22 @@ button.primary:disabled {
 
 form {
     display: flex;
-    align-items: center; /* Vertically aligns the input and button */
-    margin: 20px 0;      /* Adds some space around the form */
+    align-items: center;
+    margin: 20px 0;      
 }
 
 .filter-input {
-    padding: 10px;        /* Adds padding inside the input */
-    font-size: 16px;      /* Matches the button font size */
-    border-radius: 25px;  /* Round the corners like the button */
-    border: 1px solid #ccc; /* Light border around the input */
-    margin-right: 10px;   /* Space between input and button */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a slight shadow */
-    width: 500px;         /* Fixed width for the input field */
-    transition: all 0.3s ease; /* Smooth transition for focus */
+    padding: 10px;        
+    font-size: 16px;      
+    border-radius: 25px;  
+    border: 1px solid #ccc; 
+    margin-right: 10px;   
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    width: 500px;         
+    transition: all 0.3s ease; 
 }
 
 .filter-input:focus {
-    outline: none;        /* Remove default outline */
-    border-color: #28a292; /* Green border on focus */
-
+    outline: none;        
+    border-color: #28a292; 
 }

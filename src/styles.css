@@ -1,25 +1,12 @@
-/* General body styling */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;  /* Set box model to border-box */
+  box-sizing: border-box;  
 }
 
 html, body {
-  height: 100%;             /* Ensure body and html fill the viewport */
-  font-family: 'Arial', sans-serif; /* Set font for the application */
-  background-color: #f4f7f6; /* Set a consistent background color */
+  height: 100%;             
+  font-family: 'Arial', sans-serif; 
+  background-color: #f4f7f6; 
 }
 
-/* Utility classes for flexbox layout */
-.flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.flex-space-between {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; 
-}

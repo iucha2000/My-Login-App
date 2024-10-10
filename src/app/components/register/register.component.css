@@ -1,66 +1,64 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   }
   
-  html, body {
-    height: 100%;  /* Ensure body and html fill the viewport */
-  }
+html, body {
+  height: 100%;
+}
   
-  body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f7f6;
-    display: flex;
-    justify-content: center; /* Center items horizontally */
-    align-items: center;     /* Center items vertically */
-    height: 100vh;          /* Full viewport height */
-    margin: 0;
-  }
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;    
+  margin: 0;
+}
   
-  /* Section styling */
-  .register-container {
-    align-self: center;
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    max-width: 400px;       /* Max width for the form */
-    width: 100%;            /* Full width within the max width */
-    text-align: center;     /* Center text within the section */
-  }
+.register-container {
+  align-self: center;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 400px;       
+  width: 100%;           
+  text-align: center;     
+}
   
-  .register-section{
-    display: flex;
-    justify-content: center;
-  }
+.register-section{
+  display: flex;
+  justify-content: center;
+}
 
-  .section-heading {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    position: relative;
-    padding-bottom: 10px;
-  }
+.section-heading {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 10px;
+}
   
-  .section-heading::after {
-    content: '';
-    width: 80px;
-    height: 3px;
-    background-color: #4fb86a;  
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+.section-heading::after {
+  content: '';
+  width: 80px;
+  height: 3px;
+  background-color: #4fb86a;  
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
   
-/* Form input fields */
 input[type="text"],
 input[type="password"] {
-  width: 100%;          /* Full width for input fields */
+  width: 100%;          
   padding: 12px;
   margin: 10px 0 20px 0;
   display: inline-block;
@@ -78,7 +76,6 @@ input[type="password"]:focus {
   border-color: #4fb86a;
 }
 
-/* Label styling */
 label {
   font-size: 16px;
   color: #333;
@@ -87,10 +84,9 @@ label {
   text-align: left;
 }
 
-/* Primary button styling */
 button.primary {
-  width: 100%;            /* Full width for the button */
-  background-color: #4fb86a; /* Blue background for the button */
+  width: 100%;            
+  background-color: #4fb86a; 
   color: white;
   padding: 14px;
   border: none;
@@ -100,17 +96,17 @@ button.primary {
   font-weight: bold;
   text-transform: uppercase;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 button.primary:hover {
-  background-color: #275c34; /* Darker blue on hover */
-  transform: translateY(-2px); /* Slight lift effect */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  background-color: #275c34; 
+  transform: translateY(-2px); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
 }
 
 button.primary:disabled {
-  background-color: #ccc; /* Greyed-out button when disabled */
+  background-color: #ccc; 
   cursor: not-allowed;
   box-shadow: none;
 }
@@ -127,19 +123,19 @@ button.primary:disabled {
 
 @media (max-width: 600px) {
     section {
-        padding: 20px;       /* Adjust padding on smaller screens */
+        padding: 20px;       
     }
   
     button.primary {
-        font-size: 16px;     /* Adjust button font size */
+        font-size: 16px;     
     }
   
     label {
-        font-size: 14px;     /* Adjust label font size */
+        font-size: 14px;     
     }
   
     .section-heading {
-        font-size: 20px;     /* Adjust heading font size */
+        font-size: 20px;     
     }
   }
 

@@ -1,8 +1,7 @@
-/* This will be used for app-wide styles */
 .content {
   display: flex;
-  flex-direction: column; /* Stack elements vertically */
-  width: 100%;            /* Ensure it takes full width */
-  height: calc(100vh - 60px); /* Full height minus header height */
-  padding-top: 60px;     /* Space for fixed header */
+  flex-direction: column; 
+  width: 100%;            
+  height: calc(100vh - 60px); 
+  padding-top: 60px;     
 }

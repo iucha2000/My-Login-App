@@ -37,17 +37,17 @@
 }
 
 button.primary {
-    background-color: #4fb86a; /* Button background color */
+    background-color: #4fb86a; 
     color: white;
-    padding: 10px 15px;        /* Button padding */
+    padding: 10px 15px;        
     border: none;
-    border-radius: 10px;       /* Round button corners */
+    border-radius: 10px;       
     cursor: pointer;
-    font-size: 16px;           /* Button font size */
-    font-weight: bold;         /* Button font weight */
-    text-transform: uppercase;  /* Uppercase text */
-    transition: all 0.3s ease; /* Transition effect */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    font-size: 16px;           
+    font-weight: bold;         
+    text-transform: uppercase; 
+    transition: all 0.3s ease; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 .button-container{
@@ -70,30 +70,30 @@ input {
 .select-container {
     display: flex;
     justify-content: center;
-    margin: 10px 0; /* Margin around the dropdown */
+    margin: 10px 0; 
 }
 
 .styled-select {
-    width: 100%;  /* Make it full width within its container */
-    padding: 10px 15px; /* Padding for better spacing */
-    font-size: inherit; /* Match font size with other elements */
-    border: 1px solid #4fb86a; /* Green border to match your theme */
-    border-radius: 8px; /* Rounded corners like the card */
-    background-color: white; /* Background color */
-    color: #333; /* Text color */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
-    appearance: none; /* Remove default styling of dropdown */
-    cursor: pointer; /* Pointer on hover */
-    transition: all 0.3s ease; /* Smooth transition */
+    width: 100%;  
+    padding: 10px 15px; 
+    font-size: inherit; 
+    border: 1px solid #4fb86a; 
+    border-radius: 8px; 
+    background-color: white; 
+    color: #333; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    appearance: none; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
 }
 
 .styled-select:hover {
-    border-color: #3ca55c; /* Darken the border color on hover */
+    border-color: #3ca55c; 
 }
 
 .styled-select:focus {
-    outline: none; /* Remove default outline */
-    border-color: #3ca55c; /* Highlight border on focus */
+    outline: none; 
+    border-color: #3ca55c; 
 }
 
 strong{
