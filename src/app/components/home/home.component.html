@@ -1,10 +1,10 @@
 <app-header></app-header>
-<div *ngIf="addUserMode" class="edit-form-container" >
+<div *ngIf="addUserMode" class="edit-form-container">
   <app-add-user-form></app-add-user-form>
 </div>
-<div *ngIf="editMode" class="edit-form-container" >
+<div *ngIf="editMode" class="edit-form-container">
   <app-edit-form></app-edit-form>
 </div>
 <div class="cards-container">
-  <app-card *ngFor="let card of cards" [card] = "card"></app-card>
+  <app-card *ngFor="let card of cards" [card]="card"></app-card>
 </div>

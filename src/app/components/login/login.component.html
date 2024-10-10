@@ -1,15 +1,17 @@
-<section class = "login-section">
+<section class="login-section">
   <div class="login-container">
     <h2 class="section-heading">Log in to your account</h2>
-    <form [formGroup] = "loginForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
       <label for="username">Username</label>
-      <input id="username" type="text" formControlName="userNameField">
+      <input id="username" type="text" formControlName="userNameField" />
 
       <label for="password">Password</label>
-      <input id="password" type="password" formControlName="passwordfield">
+      <input id="password" type="password" formControlName="passwordfield" />
       <button class="primary" type="submit">Log in</button>
-      <div class = "register-text-container">
-        <label class="register-text"> Don't have an account? <a routerLink="/register">Register</a></label>
+      <div class="register-text-container">
+        <label class="register-text">
+          Don't have an account? <a routerLink="/register">Register</a></label
+        >
       </div>
     </form>
   </div>
